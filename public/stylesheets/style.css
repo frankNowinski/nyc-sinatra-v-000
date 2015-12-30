@@ -2,9 +2,13 @@ body {
   background-color: lightblue;
 }
 
-#homepage {
-  padding: 20px;
+#header {
+  padding: 30px;
   font-size: 1.8em;
+}
+
+#header>a {
+  margin-right: 50px;
 }
 
 table {

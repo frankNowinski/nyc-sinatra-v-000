@@ -3,8 +3,16 @@ class Figure < ActiveRecord::Base
   has_many :titles, through: :figure_titles
   has_many :landmarks
 
-  def landmarks=(landmark)
-    binding.pry
-    self.landmarks = Landmark.find_or_create_by(name: landmark)
+  def add_landmarks=(landmark_ids)
+    landmark_ids.each do |landmark_id|
+      landmarks << Landmark.find(landmark_id)
+    end
   end
+
+  def add_titles=(title_ids)
+    title_ids.each do |title_id|
+      titles << Title.find(title_id)
+    end
+  end
+
 end

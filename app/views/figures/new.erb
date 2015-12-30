@@ -1,24 +1,48 @@
+<h2>Create a New Figure</h2><br><br>
+
 <form action="/figures" method="post">
 
   <!-- Figure Name -->
   <div class="form-group row">
     <label for="figure_name" class="col-sm-2 form-control-label">Figure Name:</label>
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       <input type="text" id="figure_name" name="figure[name]" class="form-control" placeholder="Name">
     </div>
-  </div>
+  </div><br>
 
-  <!-- Landmark Name -->
+  <!-- Landmark Checkboxes -->
   <div class="form-group row">
-    <label for="figure_name" class="col-sm-2 form-control-label">Landmark Name:</label>
+    <label class="col-sm-2">Landmarks</label>
     <div class="col-sm-3">
-      <input type="text" id="figure_name" name="figure[landmarks]" class="form-control" placeholder="Name">
+      <div class="checkbox">
+        <label>
+          <% Landmark.all.each do |landmark| %>
+          <div class="row">
+            <input id="<%=landmark.name%>" type="checkbox" name="figure[add_landmarks][]" value="<%=landmark.id%>"> <%= landmark.name %>
+          </div>
+          <% end %>
+        </label>
+      </div>
+    </div>
+
+    <!-- Title Checkboxes -->
+    <label class="col-sm-2">Titles</label>
+    <div class="col-sm-4">
+      <div class="checkbox">
+        <label>
+          <% Title.all.each do |title| %>
+          <div class="row">
+            <input id="<%=title.name%>" type="checkbox" name="figure[add_titles][]" value="<%=title.id%>"> <%= title.name %>
+          </div>
+          <% end %>
+        </label>
+      </div>
     </div>
   </div>
 
   <!-- Submit Button -->
-  <div class="form-group row">
-    <div class="col-sm-offset-2 col-sm-10">
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-1">
       <button type="submit" value="Create New Figure" class="btn btn-primary">Create New Figure</button>
     </div>
   </div>

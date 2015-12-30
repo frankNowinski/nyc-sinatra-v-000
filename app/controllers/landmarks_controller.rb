@@ -20,12 +20,12 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/:id/edit' do
-    @landmark = Landmark.all.find_by(id: params[:id])
+    @landmark = Landmark.find(params[:id])
     erb :'landmarks/edit'
   end
 
   post '/landmarks/:id' do
-    @landmark = Landmark.all.find_by(id: params[:id])
+    @landmark = Landmark.find(params[:id])
     @landmark.update(params[:landmark])
     erb :'landmarks/show'
   end
