@@ -1,0 +1,30 @@
+<div class="row col-sm-12">
+  <table class="table table-stripped">
+    <th><p class="lead">Figure Name</p></th>
+    <th><p class="lead">Landmarks</p></th>
+    <th><p class="lead">Title</p></th>
+    <tr>
+      <!-- Figure -->
+      <% Figure.all.each do |figure| %>
+        <td><p class="lead"><a href="/figures/<%=figure.id%>"><%= figure.name %></a></p></td>
+
+        <!-- Landmarks -->
+        <td>
+        <% figure.landmarks.each do |landmark| %>
+          <p class="lead"><a href="/landmarks/<%=landmark.id%>"><%= landmark.name %>
+        <% end %>
+        </td>
+
+        <!-- Titles -->
+        <% figure.titles.each do |title| %>
+          <td><p class="lead"><a href="/titles/<%=title.id%>"><%= title.name %></td>
+        <% end %>
+    </tr>
+    <% end %>
+  </table>
+</div><br>
+
+<div class="row col-sm-12">
+  <p class="lead"><a href="landmarks/new">Create New Landmark</a></p>
+  <p class="lead"><a href="/figures">View Figures</a></p>
+</div>

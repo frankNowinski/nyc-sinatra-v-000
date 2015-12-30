@@ -1,0 +1,17 @@
+body {
+  background-color: lightblue;
+}
+
+#homepage {
+  padding: 20px;
+  font-size: 1.8em;
+}
+
+table {
+  border: 2px solid navy;
+}
+
+th, td {
+  border-right: 1px solid navy;
+  border-bottom: 1px solid navy;
+}

@@ -1,0 +1,26 @@
+<form action="/landmarks/<%=@landmark.id%>" method="post">
+
+  <!-- Landmark Name -->
+  <div class="form-group row">
+    <label for="landmark_name" class="col-sm-2 form-control-label">Landmark Name:</label>
+    <div class="col-sm-3">
+      <input type="text" id="name" name="landmark[name]" value="<%=@landmark.name%>" class="form-control" placeholder="Name">
+    </div>
+  </div>
+
+  <!-- Year Completed-->
+  <div class="form-group row">
+    <label for="song" class="col-sm-2 form-control-label">Year Completed:</label>
+    <div class="col-sm-3">
+      <input type="text" id="year_completed" name="landmark[year_completed]" value="<%=@landmark.year_completed%>" class="form-control" placeholder="Year">
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="form-group row">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" value="Edit Landmark" class="btn btn-primary">Edit Landmark</button>
+    </div>
+  </div>
+
+</form>

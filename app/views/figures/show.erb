@@ -1,0 +1,31 @@
+<div class="row  col-sm-12">
+  <table class="table table-stripped">
+    <th><p class="lead">Figure Name</p></th>
+    <th><p class="lead">Landmarks</p></th>
+    <th><p class="lead">Titles</p></th>
+    <tr>
+      <!-- Figure Name -->
+      <td><p class="lead"><%= @figure.name %></p></td>
+
+      <!-- Landmarks -->
+      <td>
+        <% @figure.landmarks.each do |landmark| %>
+          <p class="lead"><a href="/landmarks/<%=landmark.id%>"><%= landmark.name %></a></p>
+        <% end %>
+      </td>
+
+      <!-- Titles -->
+      <td>
+        <% @figure.titles.each do |title| %>
+          <p class="lead"><a href="/titles/<%=title.id%>"><%= title.name %></a></p>
+        <% end %>
+      </td>
+
+    </tr>
+  </table>
+</div><br><br>
+
+
+<div class="row col-sm-12">
+  <p class="lead"><a href="/figures/<%=@figure.id%>/edit">Edit Landmark</a></p>
+</div>

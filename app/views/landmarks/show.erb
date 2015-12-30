@@ -1,10 +1,17 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Year Completed</th>
-  </tr>
-  <tr>
-    <td><%= @landmark.name %></td>
-    <td><%= @landmark.year_completed %></td>
-  </tr>
-<table>
+<div class="row  col-sm-12">
+  <table class="table table-stripped">
+    <th><p class="lead">Name</p></th>
+    <th><p class="lead">Year Completed</p></th>
+    <th><p class="lead">Figure</p></th>
+    <tr>
+      <td><p class="lead"></a><%= @landmark.name %></a></p></td>
+      <td><p class="lead"><%= @landmark.year_completed %></p></td>
+      <td><p class="lead"><a href="/figures/<%=@landmark.figure.id%>"><%= @landmark.figure.name %></a></p></td>
+    </tr>
+  </table>
+</div><br><br>
+
+
+<div class="row col-sm-12">
+  <p class="lead"><a href="/landmarks/<%=@landmark.id%>/edit">Edit Landmark</a></p>
+</div>

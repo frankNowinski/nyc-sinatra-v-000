@@ -1,0 +1,20 @@
+<div class="row col-sm-12">
+  <table class="table table-stripped">
+    <th><p class="lead">Figure Name</p></th>
+    <th><p class="lead">Landmarks</p></th>
+    <th><p class="lead">Title</p></th>
+    <tr>
+      <!-- Figure -->
+      <% Title.all.each do |title| %>
+        <td><p class="lead"><%= title.name %></a></p></td>
+
+
+    </tr>
+    <% end %>
+  </table>
+</div><br>
+
+<div class="row col-sm-12">
+  <p class="lead"><a href="landmarks/new">Create New Landmark</a></p>
+  <p class="lead"><a href="/figures">View Figures</a></p>
+</div>

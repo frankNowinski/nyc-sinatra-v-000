@@ -1,30 +1,40 @@
 landmarks_list = {
     "Madison Square Guarden" => {
-      :year_completed => 1901
+      :year_completed => 1901,
+      :figure_id => 1
     },
     "The big bull outside" => {
-      :year_completed => 1995
+      :year_completed => 1995,
+      :figure_id => 3
     },
     "Flatiron School" => {
-      :year_completed => 2014
+      :year_completed => 2014,
+      :figure_id => 4
+
     },
     "Museum Mile" => {
-      :year_completed => 1058
+      :year_completed => 1058,
+      :figure_id => 3
     },
     "Subway Station" => {
-      :year_completed => 2015
+      :year_completed => 2015,
+      :figure_id => 1
     },
     "Cast Iron" => {
-      :year_completed => 1951
+      :year_completed => 1951,
+      :figure_id => 2
     },
     "Shea Stadium" => {
-      :year_completed => 1964
+      :year_completed => 1964,
+      :figure_id => 1
     },
     "Flatiron Building" => {
-      :year_completed => 1902
+      :year_completed => 1902,
+      :figure_id => 3
     },
     "Brooklyn Bridge" => {
-      :year_completed => 1883
+      :year_completed => 1883,
+      :figure_id => 4
     }
   }
 
@@ -44,7 +54,7 @@ figure_list = {
     },
     "Ada Lovelace" => {
     },
-    "Linus Torvalds" => { 
+    "Linus Torvalds" => {
     }
   }
 
