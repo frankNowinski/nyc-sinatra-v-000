@@ -1,6 +1,6 @@
 <div class="row  col-sm-12">
   <table class="table table-stripped">
-    <th><p class="lead">Name</p></th>
+    <th><p class="lead">Landmark</p></th>
     <th><p class="lead">Year Completed</p></th>
     <th><p class="lead">Figure</p></th>
     <tr>
@@ -12,6 +12,5 @@
 </div><br><br>
 
 
-<div class="row col-sm-12">
-  <p class="lead"><a href="/landmarks/<%=@landmark.id%>/edit">Edit Landmark</a></p>
-</div>
+<p class="lead"><a href="/landmarks/<%=@landmark.id%>/edit">Edit Landmark</a></p>
+<a class="btn btn-primary" href="/landmarks/<%=@landmark.id%>/delete">Delete Landmark</a>

@@ -1,7 +1,7 @@
 class Landmark <ActiveRecord::Base
   belongs_to :figure
 
-  def figure=(name)
-    self.figure_id = Figure.find_or_create_by(name: name).id
+  def add_figure=(figure_id)
+    self.figure =  Figure.find_or_create_by(id: figure_id)
   end
 end

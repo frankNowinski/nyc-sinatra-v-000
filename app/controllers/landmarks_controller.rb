@@ -30,4 +30,9 @@ class LandmarksController < ApplicationController
     erb :'landmarks/show'
   end
 
+  get '/landmarks/:id/delete' do
+    Landmark.find(params[:id]).delete
+    erb :'landmarks/index'
+  end
+
 end

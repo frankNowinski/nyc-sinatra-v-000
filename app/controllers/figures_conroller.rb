@@ -30,4 +30,9 @@ class FiguresController < ApplicationController
     erb :'figures/show'
   end
 
+  get '/figures/:id/delete' do
+    Figure.find(params[:id]).delete
+    erb :'figures/index'
+  end
+
 end

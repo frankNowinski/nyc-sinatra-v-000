@@ -20,11 +20,10 @@
           <p class="lead"><a href="/titles/<%=title.id%>"><%= title.name %></a></p>
         <% end %>
       </td>
-    
+
     </tr>
   </table>
 </div><br><br>
 
-<div class="row col-sm-12">
-  <p class="lead"><a href="/figures/<%=@figure.id%>/edit">Edit Figures</a></p>
-</div>
+<p class="lead"><a href="/figures/<%=@figure.id%>/edit">Edit Figures</a></p>
+<a class="btn btn-primary" href="/figures/<%=@figure.id%>/delete">Delete Figure</a>

@@ -1,3 +1,5 @@
+<h2><em>Create a Landmark</em></h2><br><br>
+
 <form action="/landmarks" method="post">
 
   <!-- Landmark Name -->
@@ -16,11 +18,17 @@
     </div>
   </div>
 
-  <!-- Figure -->
-  <div class="form-group row">
-    <label for="song" class="col-sm-2 form-control-label">Figure Name:</label>
-    <div class="col-sm-3">
-      <input type="text" id="landmark_year_completed" name="landmark[figure]" class="form-control" placeholder="Figure">
+  <!-- Figure Checkboxes -->
+  <label class="col-sm-2">Add Figure:</label>
+  <div class="col-sm-4">
+    <div class="checkbox">
+      <label>
+        <% Figure.all.each do |figure| %>
+        <div class="row">
+          <input id="<%=figure.name%>" type="checkbox" name="landmark[add_figure][]" value="<%=figure.id%>"><%= figure.name %>
+        </div>
+        <% end %>
+      </label>
     </div>
   </div>
 
