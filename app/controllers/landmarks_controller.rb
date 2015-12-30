@@ -1,6 +1,5 @@
 class LandmarksController < ApplicationController
 
-
   get '/landmarks' do
     erb :'landmarks/index'
   end
@@ -12,6 +11,7 @@ class LandmarksController < ApplicationController
   post '/landmarks' do
     @landmark = Landmark.new(params[:landmark])
     @landmark.save
+    erb :'landmarks/show'
   end
 
   get '/landmarks/:id' do
