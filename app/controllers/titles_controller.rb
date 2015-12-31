@@ -27,6 +27,7 @@ class TitlesController < ApplicationController
   post '/titles/:id' do
     @title = Title.find(params[:id])
     @title.update(params[:title])
+    @title.figures.clear if params[:title][:figure_ids].nil?
     erb :'titles/show'
   end
 

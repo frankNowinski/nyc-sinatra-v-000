@@ -25,7 +25,7 @@
       <label>
         <% Figure.all.each do |figure| %>
         <div class="row">
-          <input id="<%=figure.name%>" type="checkbox" name="landmark[add_figure][]" <%="checked" if @landmark.figure == figure%> value="<%=figure.id%>"><%= figure.name %>
+          <input id="<%=figure.name%>" type="checkbox" name="landmark[add_figure]" <%="checked" if @landmark.figure == figure%> value="<%=figure.id%>"><%= figure.name %>
         </div>
         <% end %>
       </label>
