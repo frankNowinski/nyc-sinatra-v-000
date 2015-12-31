@@ -18,7 +18,7 @@
         <label>
           <%Landmark.all.each do |landmark|%>
           <div class="row">
-            <input id="<%=landmark.name%>" type="checkbox" name="figure[add_landmarks][]" value="<%=landmark.id%>"><%=landmark.name%>
+            <input id="<%=landmark.name%>" type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.id%>"><%=landmark.name%>
           </div>
           <% end %>
         </label>
@@ -32,7 +32,7 @@
         <label>
           <%Title.all.each do |title|%>
           <div class="row">
-            <input id="<%=title.name%>" type="checkbox" name="figure[add_titles][]" value="<%=title.id%>"><%=title.name%>
+            <input id="<%=title.name%>" type="checkbox" name="figure[title_ids][]" value="<%=title.id%>"><%=title.name%>
           </div>
           <%end%>
         </label>

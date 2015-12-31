@@ -17,7 +17,7 @@
         <label>
           <%Figure.all.each do |figure|%>
           <div class="row">
-            <input id="<%=figure.name%>" type="checkbox" name="title[add_figures][]" value="<%=figure.id%>"><%=figure.name%>
+            <input id="<%=figure.name%>" type="checkbox" name="title[figure_ids][]" value="<%=figure.id%>"><%=figure.name%>
           </div>
           <%end%>
         </label>
