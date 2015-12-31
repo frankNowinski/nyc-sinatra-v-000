@@ -1,0 +1,35 @@
+<h2><em>Create a New Title</em></h2><br><br>
+
+<form action="/titles" method="post">
+
+  <!-- Title Name -->
+  <div class="form-group row">
+    <label for="title_name" class="col-sm-2 form-control-label">Title Name:</label>
+    <div class="col-sm-4">
+      <input type="text" id="title_name" name="title[name]" class="form-control" placeholder="Name">
+    </div>
+  </div><br>
+
+    <!-- Figure Checkboxes -->
+    <label class="col-sm-2">Figures</label>
+    <div class="col-sm-4">
+      <div class="checkbox">
+        <label>
+          <%Figure.all.each do |figure|%>
+          <div class="row">
+            <input id="<%=figure.name%>" type="checkbox" name="title[add_figures][]" value="<%=figure.id%>"><%=figure.name%>
+          </div>
+          <%end%>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-1">
+      <button type="submit" value="Create New Title" class="btn btn-primary">Create New Title</button>
+    </div>
+  </div>
+
+</form>

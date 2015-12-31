@@ -12,6 +12,7 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.new(params[:landmark])
     @landmark.save
     erb :'landmarks/show'
+    
   end
 
   get '/landmarks/:id' do

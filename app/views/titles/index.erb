@@ -1,20 +1,20 @@
+<p class="lead"><a href="titles/new">Create New Title</a></p>
+
 <div class="row col-sm-12">
   <table class="table table-stripped">
-    <th><p class="lead">Figure Name</p></th>
-    <th><p class="lead">Landmarks</p></th>
     <th><p class="lead">Title</p></th>
+    <th><p class="lead">Figures</p></th>
     <tr>
       <!-- Figure -->
       <% Title.all.each do |title| %>
-        <td><p class="lead"><%= title.name %></a></p></td>
+        <td><p class="lead"><a href="/titles/<%=title.id%>"><%= title.name %></a></p></td>
 
-
+        <td>
+        <% title.figures.each do |figure| %>
+        <p class="lead"><a href="/figures/<%=figure.id%>"><%= figure.name %></a></p>
+        <% end %>
+        </td>
     </tr>
     <% end %>
   </table>
 </div><br>
-
-<div class="row col-sm-12">
-  <p class="lead"><a href="landmarks/new">Create New Landmark</a></p>
-  <p class="lead"><a href="/figures">View Figures</a></p>
-</div>

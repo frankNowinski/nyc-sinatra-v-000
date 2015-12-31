@@ -1,0 +1,21 @@
+<div class="row col-sm-12">
+  <table class="table table-stripped">
+    <th><p class="lead">Title</p></th>
+    <th><p class="lead">Figures</p></th>
+    <tr>
+      <!-- Title Name -->
+      <td><p class="lead"><a href="/titles/<%=@title.id%>"><%=@title.name%></a></p></td>
+
+      <!-- Figures Name -->
+      <td>
+        <%@title.figures.each do |figure|%>
+          <p class="lead"><a href="/figures/<%=figure.id%>"><%=figure.name%></a></p>
+        <% end %>
+      </td>
+
+    </tr>
+  </table>
+</div><br><br>
+
+<p class="lead"><a href="/titles/<%=@title.id%>/edit">Edit Title</a></p>
+<a class="btn btn-primary" href="/titles/<%=@title.id%>/delete">Delete Title</a>

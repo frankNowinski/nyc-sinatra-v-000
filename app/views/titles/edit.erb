@@ -1,0 +1,35 @@
+<h2>Edit <%=@title.name%></h2><br><br>
+
+<form action="/titles/<%=@title.id%>" method="post">
+
+  <!-- Title Name -->
+  <div class="form-group row">
+    <label for="title_name" class="col-sm-2 form-control-label">Title Name:</label>
+    <div class="col-sm-3">
+      <input type="text" id="title-name" name="title[name]" value="<%=@title.name%>" class="form-control">
+    </div>
+  </div>
+
+    <!-- Title Checkboxes -->
+    <label class="col-sm-2">Add Figures</label>
+    <div class="col-sm-4">
+      <div class="checkbox">
+        <label>
+          <% Figure.all.each do |figure| %>
+          <div class="row">
+            <input id="<%=figure.name%>" type="checkbox" name="title[add_figures][]" value="<%=figure.id%>"> <%=figure.name%>
+          </div>
+          <% end %>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="form-group row">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Edit Title</button>
+    </div>
+  </div>
+
+</form>
